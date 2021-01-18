@@ -26,9 +26,9 @@
 	                        <div class="menu">
 	                    
 	                            	 <ul>
-	                                    <li><a href="accueil.html">Accueil</a></li>
+	                                    <li><a href="index.html">Accueil</a></li>
 	                                    <li><a href="EXPERIENCE.html">Experience</a></li>
-	                                    <li><a href="competences.html">Competences</a></li>
+	                                    <li><a href="competences.html">Compétences</a></li>
 	                                    <li><a href="contact.html">Contact</a></li>
 	                              </ul>
 
@@ -40,19 +40,101 @@
 	            <div class="content">
 
 	            	<center>
-	            		<p>
-							<hr>
-							<h2>EXPERIENCE</h2>
 
-							<br>03/2019 - 04/2019	> ELECTRO CONFORT STROH à Illkirch
-							<br>Maintenance et installation de matériels électroménagers et audiovisuels
-							<br>06/2018 - 07/2018	> ILLINFO à Illkirch
-							<br>11/2018 - 12/2018 	> ILLINFO à Illkirch
-						</p>
+						 <div class="box-timeline">
 
+        <div class="ligne"></div>
 
+        <div class="rond r1" data-anim="1">&#128187;</div>
+        <div class="rond r2" data-anim="2">&#128187;</div>
+        <div class="rond r3" data-anim="3">&#128187;</div>
+        <div class="rond r4" data-anim="4">&#128187;</div>
 
 
+        <div class="box b1" data-anim="1">
+            <h2>Experience 1</h2>
+            <p>
+ 			<ul>
+ 				<li>06/2018 - 07/2018	> ILLINFO à Illkirch</li>	
+ 				<li>Maintenance informatique</li>	
+ 				<li>Montage d'ordinateur</li>	
+ 				<li>Réparation d'ordinateur fixe/portable</li>	
+ 			</ul> 				
+            </p>
+            <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
+        </div>
+        <div class="box b2" data-anim="2">
+            <h2>Experience 2</h2>
+            <p>
+            	<ul>
+            		<li>11/2018 - 12/2018 	> ILLINFO à Illkirch</li>	
+               		<li>Maintenance informatique</li>	
+ 					<li>Montage d'ordinateur</li>	
+ 					<li>Réparation d'ordinateur fixe/portable</li>	
+            	</ul>
+            </p>
+            <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
+        </div>
+        <div class="box b3" data-anim="3">
+            <h2>Experience 3</h2>
+            <p>
+            	<ul>
+            	<li>03/2019 - 04/2019	> ELECTRO CONFORT STROH à Illkirch</li>	
+                <li>Maintenance et installation de matériels électroménagers et audiovisuels</li>	
+                <li>Réparation d'appareils éléctroniques</li>	
+            	</ul>
+            </p>
+            <a href="https://www.electroconfort-stroh.com/" class="btn">Voir l'entreprise</a>
+        </div>
+        <div class="box b4" data-anim="4">
+            <h2>Experience 4</h2>
+            <p>
+            	<ul>
+            		<li>01/2020 - 02/2020	> INFORUB</li>
+            		<li>Maintenance informatique</li>	
+ 					<li>Montage d'ordinateur</li>	
+ 					<li>Réparation d'ordinateur fixe/portable</li>	
+ 					<li>Réparation mobile</li>	
+ 					<li>Création et développement web</li>	
+            	</ul>            	
+            </p>
+            <a href="https://inforub.fr/accueil/" class="btn">Voir l'entreprise</a>
+        </div>
 
-	            		
-	            	</center>
+    </div>
+
+    <footer>
+                <div class="footer-bottom" >
+                    <p><span id="titre">Anthony HUMBLOT</span></p>
+                </div>
+            </footer>
+
+    
+
+					</center>
+				
+			<script>
+				$(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                      $("nav ul").toggleClass("showing");
+                });
+          });
+
+          // Scrolling Effect
+
+          $(window).on("scroll", function() {
+                if($(window).scrollTop()) {
+                      $('nav').addClass('black');
+                }
+
+                else {
+                      $('nav').removeClass('black');
+                }
+          })
+
+
+			</script>
+	
+	</body>
+	</html>
+

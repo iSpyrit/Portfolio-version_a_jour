@@ -2,20 +2,29 @@ html, body {
       margin: 0;
       padding: 0;
       width: 100%;
-      color:#000000
+      color:#A1A1A1
       ;
 }
 
 body {
-      font-family: "Cantarell",sans-serif;
+      font-family: "Abel",sans-serif;
       font-weight: lighter;
+      background-color: #353232;
 }
 
 header {
       width: 100%;
-      height: 100vh;
+      height: 80vh;
       background: url(hero.jpg) no-repeat 50% 50%;
       background-size: cover;
+}
+
+.un{
+      margin: 0;
+      height: 170px;
+      columns: 2;
+      font-size: 20px;
+      font-family: "Abel";
 }
 
 .content {
@@ -115,4 +124,349 @@ nav ul li a {
             display: block;
       }
 
+}
+
+.container{
+    height: auto;
+    width: 60%;
+    border-radius: 3px;
+    box-shadow: 0 0 25px #000;
+    padding: 10px 80px 40px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container .bar:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 100%;
+    background: #444;
+    border-radius: 5px;
+    box-shadow: inset 10px 10px 10px #2c2c2c, 
+            inset -5px -5px 10px #5c5c5c;
+}
+
+.bar-stat{
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #000;
+}
+
+#MI{
+    background: #A82121;
+    animation: htmlSlideA 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+#CRI{
+    background: black;
+    animation: cssSlideA 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+#montage{
+    background: #A82121;
+    animation: htmlSlideB 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+#rc{
+      background: black;
+    animation: cssSlideB 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+#html{
+      background: #A82121;
+    animation: htmlSlideC 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+#css{
+      background: black;
+    animation: cssSlideC 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+
+@keyframes htmlSlideA{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+@keyframes htmlSlideB{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+@keyframes htmlSlideC{
+    0%{width: 0%;}
+    100%{width: 30%;}
+}
+
+@keyframes cssSlideA{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+@keyframes cssSlideB{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+@keyframes cssSlideC{
+    0%{width: 0%;}
+    100%{width: 20%;}
+}
+
+
+}
+
+.box-timeline {
+    width: 100%;
+    height: 1500px;
+    background: #f1f1f1;
+    position: relative;
+    padding: 80px 0 250px 0;
+    margin-bottom: 100px;
+}
+
+.ligne {
+    height: 1000px;
+    width: 8px;
+    margin: 0 auto;
+    background: #000000;
+}
+
+.rond {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #333;
+    position: absolute;
+    border: 1px solid #A82121;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* 1000 - 160 + 80 / 3 =~ 306 */
+.r1{top: 600px;}
+.r2{top: 950px;}
+.r3{top: 1250px;}
+.r4{top: 1600px;}
+
+.box {
+    color: #fff;
+    width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 3px;
+    height: auto;
+    background: #000000;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.b1 {
+    top: 600px;
+    left: calc(50% - 270px);
+}
+.b2 {
+    top: 900px;
+    left: calc(50% + 270px);
+}
+.b3 {
+    top: 1200px;
+    left: calc(50% - 270px);
+}
+.b4 {
+    top: 1500px;
+    left: calc(50% + 270px);
+}
+
+.box p {
+    line-height: 20px;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+.btn {
+    display: block;
+    background: #A82121;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .ligne {
+        position: relative;
+        left: 200px;
+    }
+    .rond {
+        left: calc(50% + 200px);
+    }
+    .box {
+        left: calc(50% - 50px)
+    }
+
+}
+
+#heart{ 
+  animation: pulsate 1s infinite;
+  max-width: 4%;
+    height: 12px;
+}
+  
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contact {width:100%;
+    height:100%;
+}
+    
+
+.contact-container{
+    max-width:1100px;
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:70%;
+    width:100%;
+}
+
+.contact-details{
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    border-radius: 10px 0 0 10px;
+}
+
+.contact-details img{
+    width:200px;
+}
+
+.contact-form{
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.contact-form form{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.contact-form form span{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom:20px;
+    background-size:100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+}
+
+form input[type="text"]{
+    width:55%;
+    height:40px;
+    margin:15px;
+    background:transparent;
+    border:0;
+    border-bottom: 2px solid rgb(124, 124, 124);
+    font-size: 15px;
+}
+
+form input[type="submit"]{
+    width:55%;
+    height:40px;
+    margin:10px;
+    border:0;
+    border-radius:10px;
+    font-weight:400;
+    color:white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image:linear-gradient(135deg, #353232 -20%, #A82121 120%);
+}
+
+form textarea{
+    border:0;
+    margin-top:20px;
+    margin-bottom: 10px;
+    height:50px;
+    width:55%;
+    border-bottom:2px solid rgb(124, 124, 124);
+    font-size: 15px;
+}
+
+}
+
+.footer {
+  text-align: center;
+  padding: 2px;
+  background-color: #121212;
+  color: white;
+}
+
+.footer-bottom{
+  background: #121212;
+  padding: 5px;
+  text-align: center;
+  color: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  font-size: 1em ;
+}
+
+#titre{
+  opacity: .4;
+  font-size: large;
 }

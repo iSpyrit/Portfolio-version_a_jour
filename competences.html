@@ -26,9 +26,9 @@
 	                        <div class="menu">
 	                    
 	                            	 <ul>
-	                                    <li><a href="accueil.html">Accueil</a></li>
+	                                    <li><a href="index.html">Accueil</a></li>
 	                                    <li><a href="EXPERIENCE.html">Experience</a></li>
-	                                    <li><a href="competences.html">Competences</a></li>
+	                                    <li><a href="competences.html">Compétences</a></li>
 	                                    <li><a href="contact.html">Contact</a></li>
 	                              </ul>
 	                            
@@ -40,16 +40,117 @@
 
 	            <div class="content">
 
-	            	<center>
-	            		<p>
-							<hr>
-							<h2>COMPETENCES</h2>
 
-							<br>Maintenance informatique
-							<br>Création de réseaux informatiques
-							<br>Montage PC
-							<br>Relation clientèle		
-						</p>
+<center>            		
+<h2>COMPETENCES</h2>
 
-	            	</center>
+							
+<body>
+    <div class="container">
+        <h1>Mes compétences en développement</h1>
+        <div class="bar">
+            <div class="bar-stat" id="html">
+                <span class="bar-text">HTML - 30%</span>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="bar-stat" id="css">
+                <span class="bar-text">CSS - 20%</span>
+            </div>
+        </div>
+        <div class="bar">
+        </div>
+    </div>
+</body>
+
+<body>
+    <div class="container">
+        <h1>Mes compétences techniques</h1>
+        <div class="bar">
+            <div class="bar-stat" id="MI">
+                <span class="bar-text">Maintenance informatique - 80%</span>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="bar-stat" id="CRI">
+                <span class="bar-text">Création de réseaux informatiques - 70%</span>
+            </div>
+         <div class="bar">
+            <div class="bar-stat" id="montage">
+                <span class="bar-text">Montage PC - 90%</span>
+            </div>
+         <div class="bar">
+            <div class="bar-stat" id="rc">
+                <span class="bar-text">Relation clientèle - 70%</span>
+            </div>
+        </div>
+        <div class="bar">
+        </div>
+    </div>
+
+  <footer>
+            <div class="footer-bottom" >
+                <p><span id="titre">Anthony HUMBLOT</span></p>
+            </div>
+        </footer>
+
+    
+</center>  
+  <script>
+  	$(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                      $("nav ul").toggleClass("showing");
+                });
+          });
+
+          // Scrolling Effect
+
+          $(window).on("scroll", function() {
+                if($(window).scrollTop()) {
+                      $('nav').addClass('black');
+                }
+
+                else {
+                      $('nav').removeClass('black');
+                }
+          })
+
+
+  </script>
+
+  <script>
+  	onst allRonds = document.querySelectorAll('.rond');
+const allBoxes = document.querySelectorAll('.box');
+
+const controller = new ScrollMagic.Controller()
+
+allBoxes.forEach(box => {
+
+    for(i = 0; i < allRonds.length; i++){
+
+        if(allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')){
+
+            let tween = gsap.from(box, {y: -50, opacity: 0, duration: 0.5})
+
+            let scene = new ScrollMagic.Scene({
+                triggerElement: allRonds[i],
+                reverse: true
+            })
+            .setTween(tween)
+            // .addIndicators()
+            .addTo(controller)
+
+        }
+
+    }
+
+})
+  </script>
+
+</center>
+    
+</body>
+</html>
+
+
 	            	
