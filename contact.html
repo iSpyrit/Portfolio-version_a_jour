@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html lang="en">
+<html lang="fr">
 	<head>
 	      <meta charset="UTF-8">
 	      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,86 +10,71 @@
 	      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	</head>
 	<body>
-	      <div class="wrapper">
-	            <header>
+	    <div class="wrapper"></div>
+	    <header>
+	        <nav>
+	            <div class="menu-icon">
+	                <i class="fa fa-bars fa-2x"></i>
+	            </div>
+	            <div class="logo">
+	                ANTHONY HUMBLOT
+	            </div>
+	            <div class="menu">
+					<ul>
+	                    <li><a href="index.html">Accueil</a></li>
+	                    <li><a href="Experience.html">Experience</a></li>
+	                    <li><a href="competences.html">Compétences</a></li>
+	                    <li><a href="contact.html">Contact</a></li>
+	            	</ul>
+	            </div>
+	        </nav>
+	    </header>
+	  	<div class="content">
+			<div class="contact">
+        		<div class="contact-container">
+            		<div class="contact-box">
+                		<div class="contact-details">
+                    		<h1>Anthony HUMBLOT</h1>
+                    		<p>anthony.humblot.pro@gmail.com</p>
+                    		<p>France, Strasbourg</p>
+                		</div>
+                		<div class="contact-form">
+                    		<form>
+                        	<span>Contact Me</span>
+                        		<input type="text" placeholder="NOM Prénom">
+                        		<input type="text" placeholder="Votre adresse mail">
+                        		<input type="text" placeholder="N° Téléphone">
+                        		<input type="text" placeholder="Objet">
+                        		<textarea placeholder="Veuillez entrer votre message"></textarea>
+                        		<input type="submit" value="Transmettre">
+                    		</form>
+                		</div>
+					</div>
+        		</div>
+   			 </div>
 
-	                  <nav>
-
-	                        <div class="menu-icon">
-	                              <i class="fa fa-bars fa-2x"></i>
-	                        </div>
-
-	                        <div class="logo">
-	                              ANTHONY HUMBLOT
-	                        </div>
-
-	                        <div class="menu">
-	                    
-	                            	 <ul>
-	                                    <li><a href="index.html">Accueil</a></li>
-	                                    <li><a href="EXPERIENCE.html">Experience</a></li>
-	                                    <li><a href="competences.html">Compétences</a></li>
-	                                    <li><a href="contact.html">Contact</a></li>
-	                              </ul>
-	                            
-	                             
-	                        </div>
-	                  </nav>
-
-	            </header>
-
-	            <div class="content">
-
-	<div class="contact">
-        <div class="contact-container">
-            <div class="contact-box">
-                <div class="contact-details">
-                    <h1>Anthony HUMBLOT</h1>
-                    <p>anthony.humblot.pro@gmail.com</p>
-                    <p>France, Strasbourg</p>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <span>Contact Me</span>
-                        <input type="text" placeholder="NOM Prénom">
-                        <input type="text" placeholder="Votre adresse mail">
-                        <input type="text" placeholder="N° Téléphone">
-                        <input type="text" placeholder="Objet">
-                        <textarea placeholder="Veuillez entrer votre message"></textarea>
-                        <input type="submit" value="Transmettre">
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-	<footer>
-	        <div class="footer-bottom" >
-	            <p><span id="titre">Anthony HUMBLOT</span></p>
-	        </div>
-	    </footer>
+			<footer>
+		    <p class="titre">Anthony HUMBLOT</p>
+		    <p>CCI Campus - 234 Avenue de Colmar, 67021 Strasbourg</p>
+		</footer>
 
 <script>
-	$(document).ready(function() {
-                $(".menu-icon").on("click", function() {
-                      $("nav ul").toggleClass("showing");
-                });
-          });
+$(document).ready(function() {
+	$(".menu-icon").on("click", function() {
+		$("nav ul").toggleClass("showing");
+	});
+});
 
-          // Scrolling Effect
-
-          $(window).on("scroll", function() {
-                if($(window).scrollTop()) {
-                      $('nav').addClass('black');
-                }
-
-                else {
-                      $('nav').removeClass('black');
-                }
-          })
-
+// Scrolling Effect
+$(window).on("scroll", function() {
+	if($(window).scrollTop()) {
+		$('nav').addClass('black');
+	}else{
+		$('nav').removeClass('black');
+	}
+})
 </script>
 
+</body>
+</html>
 
-	<body>

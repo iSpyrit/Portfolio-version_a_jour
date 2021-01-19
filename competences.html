@@ -1,156 +1,120 @@
 <!DOCTYPE html>
-	<html lang="en">
+<html lang="fr">
 	<head>
-	      <meta charset="UTF-8">
-	      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	      <title>Portfolio Anthony HUMBLOT BTS SIO</title>
-	      <link rel="stylesheet" href="style.css">
-	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Portfolio Anthony HUMBLOT BTS SIO</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	</head>
 	<body>
-	      <div class="wrapper">
-	            <header>
+		<div class="wrapper"></div>
+		<header>
+			<nav>
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+				<div class="logo">
+					ANTHONY HUMBLOT
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="Experience.html">Experience</a></li>
+						<li><a href="competences.html">Compétences</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="content">    
+			<div class="title">  
+				<h2>COMPETENCES</h2>
+			</div>   		
+			<div class="container">
+				<h1>Mes compétences en développement</h1>
+				<div class="bar">
+					<div class="bar-stat" id="html">
+						<span class="bar-text">HTML - 30%</span>
+					</div>
+				</div>
+				<div class="bar">
+					<div class="bar-stat" id="css">
+						<span class="bar-text">CSS - 20%</span>
+					</div>
+				</div>
+				<div class="bar"></div>
+				<h1>Mes compétences techniques</h1>
+				<div class="bar">
+					<div class="bar-stat" id="MI">
+						<span class="bar-text">Maintenance informatique - 80%</span>
+					</div>
+				</div>
+				<div class="bar">
+					<div class="bar-stat" id="CRI">
+						<span class="bar-text">Création de réseaux informatiques - 70%</span>
+					</div>
+					<div class="bar">
+						<div class="bar-stat" id="montage">
+							<span class="bar-text">Montage PC - 90%</span>
+						</div>
+						<div class="bar">
+							<div class="bar-stat" id="rc">
+								<span class="bar-text">Relation clientèle - 70%</span>
+							</div>
+						</div>
+						<div class="bar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+		    <p class="titre">Anthony HUMBLOT</p>
+		    <p>CCI Campus - 234 Avenue de Colmar, 67021 Strasbourg</p>
+		</footer>
+	</body>
+</html>
 
-	                  <nav>
+<script>
+$(document).ready(function() {
+	$(".menu-icon").on("click", function() {
+		$("nav ul").toggleClass("showing");
+	});
+});
 
-	                        <div class="menu-icon">
-	                              <i class="fa fa-bars fa-2x"></i>
-	                        </div>
+// Scrolling Effect
+$(window).on("scroll", function() {
+	if($(window).scrollTop()) {
+		$('nav').addClass('black');
+	}else{
+		$('nav').removeClass('black');
+	}
+})
+</script>
 
-	                        <div class="logo">
-	                              ANTHONY HUMBLOT
-	                        </div>
-
-	                        <div class="menu">
-	                    
-	                            	 <ul>
-	                                    <li><a href="index.html">Accueil</a></li>
-	                                    <li><a href="EXPERIENCE.html">Experience</a></li>
-	                                    <li><a href="competences.html">Compétences</a></li>
-	                                    <li><a href="contact.html">Contact</a></li>
-	                              </ul>
-	                            
-	                             
-	                        </div>
-	                  </nav>
-
-	            </header>
-
-	            <div class="content">
-
-
-<center>            		
-<h2>COMPETENCES</h2>
-
-							
-<body>
-    <div class="container">
-        <h1>Mes compétences en développement</h1>
-        <div class="bar">
-            <div class="bar-stat" id="html">
-                <span class="bar-text">HTML - 30%</span>
-            </div>
-        </div>
-        <div class="bar">
-            <div class="bar-stat" id="css">
-                <span class="bar-text">CSS - 20%</span>
-            </div>
-        </div>
-        <div class="bar">
-        </div>
-    </div>
-</body>
-
-<body>
-    <div class="container">
-        <h1>Mes compétences techniques</h1>
-        <div class="bar">
-            <div class="bar-stat" id="MI">
-                <span class="bar-text">Maintenance informatique - 80%</span>
-            </div>
-        </div>
-        <div class="bar">
-            <div class="bar-stat" id="CRI">
-                <span class="bar-text">Création de réseaux informatiques - 70%</span>
-            </div>
-         <div class="bar">
-            <div class="bar-stat" id="montage">
-                <span class="bar-text">Montage PC - 90%</span>
-            </div>
-         <div class="bar">
-            <div class="bar-stat" id="rc">
-                <span class="bar-text">Relation clientèle - 70%</span>
-            </div>
-        </div>
-        <div class="bar">
-        </div>
-    </div>
-
-  <footer>
-            <div class="footer-bottom" >
-                <p><span id="titre">Anthony HUMBLOT</span></p>
-            </div>
-        </footer>
-
-    
-</center>  
-  <script>
-  	$(document).ready(function() {
-                $(".menu-icon").on("click", function() {
-                      $("nav ul").toggleClass("showing");
-                });
-          });
-
-          // Scrolling Effect
-
-          $(window).on("scroll", function() {
-                if($(window).scrollTop()) {
-                      $('nav').addClass('black');
-                }
-
-                else {
-                      $('nav').removeClass('black');
-                }
-          })
-
-
-  </script>
-
-  <script>
-  	onst allRonds = document.querySelectorAll('.rond');
+<script>
+onst allRonds = document.querySelectorAll('.rond');
 const allBoxes = document.querySelectorAll('.box');
 
 const controller = new ScrollMagic.Controller()
 
 allBoxes.forEach(box => {
-
-    for(i = 0; i < allRonds.length; i++){
-
-        if(allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')){
-
-            let tween = gsap.from(box, {y: -50, opacity: 0, duration: 0.5})
-
-            let scene = new ScrollMagic.Scene({
-                triggerElement: allRonds[i],
-                reverse: true
-            })
-            .setTween(tween)
-            // .addIndicators()
-            .addTo(controller)
-
-        }
-
-    }
-
+	for(i = 0; i < allRonds.length; i++){
+		if(allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')){
+			let tween = gsap.from(box, {y: -50, opacity: 0, duration: 0.5})
+			let scene = new ScrollMagic.Scene({
+				triggerElement: allRonds[i],
+				reverse: true
+			})
+			.setTween(tween)
+ 			// .addIndicators()
+			.addTo(controller)
+		}
+	}
 })
-  </script>
+</script>
 
-</center>
-    
 </body>
 </html>
-
-
-	            	
