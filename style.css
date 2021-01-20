@@ -233,7 +233,7 @@ h1{
 }
 
 .ligne {
-    height: 1000px;
+    height: 1100px;
     width: 8px;
     margin: 0 auto;
     background: #000000;
@@ -254,9 +254,9 @@ h1{
     font-size: 40px;
 }
 /* 1000 - 160 + 80 / 3 =~ 306 */
-.r1{top: 600px;}
-.r2{top: 950px;}
-.r3{top: 1250px;}
+.r1{top: 700px;}
+.r2{top: 1000px;}
+.r3{top: 1300px;}
 .r4{top: 1600px;}
 
 .box {
@@ -274,7 +274,7 @@ h1{
 }
 
 .b1 {
-    top: 600px;
+    top: 700px;
     left: calc(50% - 270px);
 }
 .b2 {
@@ -282,11 +282,11 @@ h1{
     left: calc(50% + 270px);
 }
 .b3 {
-    top: 1200px;
+    top: 1100px;
     left: calc(50% - 270px);
 }
 .b4 {
-    top: 1500px;
+    top: 1300px;
     left: calc(50% + 270px);
 }
 

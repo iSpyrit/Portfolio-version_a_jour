@@ -30,68 +30,69 @@
             </nav>
         </header>
         <div class="content">
-        <div class="box-timeline"></div>
+            <div class="box-timeline"></div>
             <div class="ligne"></div>
             <div class="rond r1" data-anim="1">&#128187;</div>
             <div class="rond r2" data-anim="2">&#128187;</div>
             <div class="rond r3" data-anim="3">&#128187;</div>
-        <div class="rond r4" data-anim="4">&#128187;</div>
+            <div class="rond r4" data-anim="4">&#128187;</div>
         </div>
+        <div>
             <div class="box b1" data-anim="1">
                 <h2>Experience 1</h2>
-            <p>
-            <ul>
-                <li>06/2018 - 07/2018   > ILLINFO à Illkirch</li>   
-                <li>Maintenance informatique</li>   
-                <li>Montage d'ordinateur</li>   
-                <li>Réparation d'ordinateur fixe/portable</li>  
-            </ul>               
-            </p>
-            <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
+                <p>
+                    <ul>
+                        <li>06/2018 - 07/2018   > ILLINFO à Illkirch</li>   
+                        <li>Maintenance informatique</li>   
+                        <li>Montage d'ordinateur</li>   
+                        <li>Réparation d'ordinateur fixe/portable</li>  
+                    </ul>               
+                </p>
+                <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
             </div>
             <div class="box b2" data-anim="2">
-            <h2>Experience 2</h2>
-            <p>
-                <ul>
-                    <li>11/2018 - 12/2018   > ILLINFO à Illkirch</li>   
-                    <li>Maintenance informatique</li>   
-                    <li>Montage d'ordinateur</li>   
-                    <li>Réparation d'ordinateur fixe/portable</li>  
-                </ul>
-            </p>
-            <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
+                <h2>Experience 2</h2>
+                <p>
+                    <ul>
+                        <li>11/2018 - 12/2018   > ILLINFO à Illkirch</li>   
+                        <li>Maintenance informatique</li>   
+                        <li>Montage d'ordinateur</li>   
+                        <li>Réparation d'ordinateur fixe/portable</li>  
+                    </ul>
+                </p>
+                <a href="https://www.pagesjaunes.fr/pros/51863324" class="btn">Voir l'entreprise</a>
+            </div>
+            <div class="box b3" data-anim="3">
+                <h2>Experience 3</h2>
+                <p>
+                    <ul>
+                        <li>03/2019 - 04/2019   > ELECTRO CONFORT STROH à Illkirch</li> 
+                        <li>Maintenance et installation de matériels électroménagers et audiovisuels</li>   
+                        <li>Réparation d'appareils éléctroniques</li>   
+                    </ul>
+                </p>
+                <a href="https://www.electroconfort-stroh.com/" class="btn">Voir l'entreprise</a>
+            </div>
+            <div class="box b4" data-anim="4">
+                <h2>Experience 4</h2>
+                <p>
+                    <ul>
+                        <li>01/2020 - 02/2020   > INFORUB</li>
+                        <li>Maintenance informatique</li>   
+                        <li>Montage d'ordinateur</li>   
+                        <li>Réparation d'ordinateur fixe/portable</li>  
+                        <li>Réparation mobile</li>  
+                        <li>Création et développement web</li>  
+                    </ul>               
+                </p>
+                <a href="https://inforub.fr/accueil/" class="btn">Voir l'entreprise</a>
+            </div>
         </div>
-        <div class="box b3" data-anim="3">
-            <h2>Experience 3</h2>
-            <p>
-                <ul>
-                <li>03/2019 - 04/2019   > ELECTRO CONFORT STROH à Illkirch</li> 
-                <li>Maintenance et installation de matériels électroménagers et audiovisuels</li>   
-                <li>Réparation d'appareils éléctroniques</li>   
-                </ul>
-            </p>
-            <a href="https://www.electroconfort-stroh.com/" class="btn">Voir l'entreprise</a>
-        </div>
-        <div class="box b4" data-anim="4">
-            <h2>Experience 4</h2>
-            <p>
-                <ul>
-                    <li>01/2020 - 02/2020   > INFORUB</li>
-                    <li>Maintenance informatique</li>   
-                    <li>Montage d'ordinateur</li>   
-                    <li>Réparation d'ordinateur fixe/portable</li>  
-                    <li>Réparation mobile</li>  
-                    <li>Création et développement web</li>  
-                </ul>               
-            </p>
-            <a href="https://inforub.fr/accueil/" class="btn">Voir l'entreprise</a>
-        </div>
-    
-
         <footer>
             <p class="titre">Anthony HUMBLOT</p>
             <p>CCI Campus - 234 Avenue de Colmar, 67021 Strasbourg</p>
         </footer>
+
 
 <script>
 $(document).ready(function() {
@@ -108,7 +109,30 @@ $(window).on("scroll", function() {
         $('nav').removeClass('black');
     }
 })
+
+//animation expérience
+
+onst allRonds = document.querySelectorAll('.rond');
+const allBoxes = document.querySelectorAll('.box');
+const controller = new ScrollMagic.Controller()
+allBoxes.forEach(box => {
+    for(i = 0; i < allRonds.length; i++){
+        if(allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')){
+            let tween = gsap.from(box, {y: -50, opacity: 0, duration: 0.5})
+            let scene = new ScrollMagic.Scene({
+                triggerElement: allRonds[i],
+                reverse: true
+            })
+            .setTween(tween)
+            // .addIndicators()
+            .addTo(controller)
+        }
+    }
+
+})
 </script>
+
+
 
 	
 </body>
